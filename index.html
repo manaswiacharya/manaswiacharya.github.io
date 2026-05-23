@@ -1,25 +1,283 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Manaswi Acharya</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manaswi Acharya — Doctor, Writer, Artist</title>
+  <meta name="description" content="Manaswi Acharya — Medical Student from Nepal. Reflections on medicine, life, literature, and art.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
     body {
-      font-family: Georgia, serif;
-      max-width: 700px;
-      margin: 80px auto;
-      padding: 20px;
+      font-family: 'Inter', sans-serif;
+      color: #2c2c2c;
+      background: #faf9f6;
       line-height: 1.7;
-      color: #222;
     }
-    h1 { font-size: 2.5em; }
-    a { color: #0066cc; }
+    
+    /* Navigation */
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(250, 249, 246, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #e8e6e1;
+      z-index: 100;
+    }
+    
+    nav .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #2c2c2c;
+      text-decoration: none;
+    }
+    
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+    
+    nav ul a {
+      text-decoration: none;
+      color: #555;
+      font-size: 0.95rem;
+      font-weight: 400;
+      transition: color 0.3s;
+    }
+    
+    nav ul a:hover { color: #8b6f47; }
+    
+    /* Hero */
+    .hero {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 100px 40px 80px;
+      text-align: center;
+    }
+    
+    .hero img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 30px;
+      border: 4px solid #fff;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.5rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #1a1a1a;
+    }
+    
+    .hero .tagline {
+      font-size: 1.2rem;
+      color: #666;
+      margin-bottom: 40px;
+      font-style: italic;
+    }
+    
+    .hero .intro {
+      font-size: 1.1rem;
+      color: #444;
+      max-width: 650px;
+      margin: 0 auto 30px;
+    }
+    
+    /* Sections */
+    section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 60px 40px;
+    }
+    
+    section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+      color: #1a1a1a;
+      border-bottom: 2px solid #8b6f47;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    
+    /* Cards */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+    
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    
+    .card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      color: #1a1a1a;
+    }
+    
+    .card p {
+      color: #666;
+      font-size: 0.95rem;
+    }
+    
+    .card a {
+      display: inline-block;
+      margin-top: 15px;
+      color: #8b6f47;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    
+    /* Footer */
+    footer {
+      background: #1a1a1a;
+      color: #ccc;
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: 60px;
+    }
+    
+    footer a {
+      color: #d4af7a;
+      text-decoration: none;
+      margin: 0 15px;
+    }
+    
+    footer .copyright {
+      margin-top: 20px;
+      font-size: 0.85rem;
+      color: #777;
+    }
+    
+    /* Responsive */
+    @media (max-width: 600px) {
+      nav { padding: 15px 20px; flex-direction: column; gap: 15px; }
+      nav ul { gap: 15px; flex-wrap: wrap; justify-content: center; }
+      .hero h1 { font-size: 2.5rem; }
+      .hero { padding: 60px 20px; }
+      section { padding: 40px 20px; }
+    }
   </style>
 </head>
 <body>
-  <h1>Manaswi Acharya</h1>
-  <p>MBBS Student | Writer | Thinker from Nepal 🇳🇵</p>
-  <p>Welcome to my corner of the internet. Essays coming soon.</p>
-  <hr>
-  <p><a href="mailto:docmanaswi@gmail.com">Contact me</a></p>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="/" class="logo">Manaswi Acharya</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#essays">Essays</a></li>
+      <li><a href="#hospital">Hospital Diaries</a></li>
+      <li><a href="#art">Art</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <img src="profile.jpg" alt="Manaswi Acharya" onerror="this.style.display='none'">
+    <h1>Manaswi Acharya</h1>
+    <p class="tagline">Medicine · Words · Art</p>
+    <p class="intro">
+      I'm a medical student from Nepal 🇳🇵, writing about life inside hospital walls, 
+      the philosophy of healing, and the quiet beauty I find in everyday moments. 
+      I also make art.
+    </p>
+  </div>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About</h2>
+    <p>
+      I'm currently pursuing my MBBS, learning the science and soul of medicine. 
+      But I've always been more than a student of biology — I'm a student of 
+      humanity. Through essays, I try to capture what medicine teaches me about 
+      life, death, and everything in between. Through art, I express what words 
+      cannot.
+    </p>
+    <p style="margin-top: 15px;">
+      This is my corner of the internet — part journal, part gallery, part archive.
+    </p>
+  </section>
+
+  <!-- Essays -->
+  <section id="essays">
+    <h2>Essays</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Coming Soon</h3>
+        <p>My first essay is being crafted. Stay tuned.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hospital Diaries -->
+  <section id="hospital">
+    <h2>Hospital Diaries</h2>
+    <p>Reflections from my journey as a medical student — patients I meet, lessons I learn, moments that stay with me.</p>
+    <div class="cards">
+      <div class="card">
+        <h3>Coming Soon</h3>
+        <p>Stories from the wards.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Art -->
+  <section id="art">
+    <h2>Art</h2>
+    <p>My art is forthcoming. Originals and prints will be available soon.</p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      For collaborations, conversations, or commissions — 
+      <a href="mailto:docmanaswi@gmail.com" style="color: #8b6f47;">docmanaswi@gmail.com</a>
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div>
+      <a href="https://instagram.com/yourusername">Instagram</a> ·
+      <a href="https://twitter.com/yourusername">Twitter</a> ·
+      <a href="mailto:docmanaswi@gmail.com">Email</a>
+    </div>
+    <p class="copyright">
+      © 2026 Manaswi Acharya · All rights reserved · Made with care in Nepal 🇳🇵
+    </p>
+  </footer>
+
 </body>
 </html>
